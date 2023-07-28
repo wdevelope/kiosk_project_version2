@@ -8,9 +8,9 @@
 - food
 
   1. POST /food
-  1. GET /food
-  1. DELETE /food/:id
-  1. PUT /food/:id
+  2. GET /food
+  3. DELETE /food/:id
+  4. PUT /food/:id
 
 - food_option
   (아직 미정)
