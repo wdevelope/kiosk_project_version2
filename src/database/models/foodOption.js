@@ -1,6 +1,27 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../mysql');
 
-const aboutOrder = sequelize.define('aboutOrder', {});
+const foodOption = sequelize.define('foodOption', {
+  id: {
+    type: DataTypes.BIGINT,
+    allowNull: false,
+    primaryKey: true,
+  },
 
-module.exports = aboutOrder;
+  sizePrice: {
+    type: DataTypes.BIGINT,
+    allowNull: false,
+  },
+
+  shotPrice: {
+    type: DataTypes.BIGINT,
+    allowNull: false,
+  },
+
+  hotcoldePrice: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
+  },
+});
+
+module.exports = foodOption;

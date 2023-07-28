@@ -1,6 +1,16 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../mysql');
 
-const aboutOrder = sequelize.define('aboutOrder', {});
+const customer = sequelize.define('customer', {
+  id: {
+    type: DataTypes.BIGINT,
+    allowNull: false,
+    primaryKey: true,
+  },
+  state: {
+    type: DataTypes.BIGINT,
+    allowNull: false,
+  },
+});
 
-module.exports = aboutOrder;
+module.exports = customer;
