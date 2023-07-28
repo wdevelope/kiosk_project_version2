@@ -2,4 +2,4 @@
 
 # ERD
 
-![ERD](https://i.postimg.cc/bY4KKZmp/20230728142721.png)
+![ERD](https://postimg.cc/Thq7b384)
