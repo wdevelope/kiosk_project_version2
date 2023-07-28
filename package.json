@@ -6,6 +6,6 @@
     "sequelize": "^6.32.1"
   },
   "scripts": {
-    "start": "nodemon app"
+    "start": "nodemon src/app.js"
   }
 }

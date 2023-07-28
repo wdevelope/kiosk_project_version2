@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-const relations = require('./src/database/relations');
-const mysql = require('./src/database/mysql');
+const relations = require('./database/relations');
+const mysql = require('./database/mysql');
 
 //sequelize를 사용해서 MYSQL 데이터베이스와 동기화
 (async () => {
