@@ -1,4 +1,4 @@
-const foodService = require('../3.services/foodService');
+const foodService = require('../services/foodService');
 
 module.exports = {
   createFood: async (req, res) => {

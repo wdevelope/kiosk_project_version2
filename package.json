@@ -1,4 +1,11 @@
 {
+  "name": "kiosk_ver2",
+  "description": "- express, javascript 함수화 기본 서버구현",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
@@ -6,6 +13,6 @@
     "sequelize": "^6.32.1"
   },
   "scripts": {
-    "start": "nodemon src/app.js"
+    "dev": "nodemon src/app.js"
   }
 }

@@ -1,4 +1,4 @@
-const foodRepository = require('../4.repositories/foodRepository');
+const foodRepository = require('../repositories/foodRepository');
 
 module.exports = {
   createFood: async (data) => {
