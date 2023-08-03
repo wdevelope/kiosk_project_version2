@@ -4,6 +4,8 @@
 - express, javascript 함수화를 사용해서 기본 서버구현
 - 기능에 문제 없는 선에서, 최대한 간결하게
 
+<br>
+
 # 🔥 ERD
 
 ![ERD](https://ifh.cc/g/Qn26oX.png)
@@ -13,6 +15,8 @@
 3. company_order : 음식 발주
 4. about_order : 주문 처리
 5. customer : 주문 고객
+
+<br>
 
 # 🔥 api 가이드
 
@@ -29,7 +33,7 @@
 2. 완료 (PUT) = /order/complete/:orderId
 3. 취소 (DELETE) = /order/cancel/:orderId
 
-### 📦 companyorder
+### 📦 company_order
 
 1. 생성 (POST) = /companyorder
 2. 수정 (PUT) = /companyorder/:id
