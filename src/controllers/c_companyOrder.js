@@ -1,4 +1,4 @@
-const companyOrderService = require('../services/companyOrderService');
+const companyOrderService = require('../services/s_companyOrder');
 
 module.exports = {
   // 발주 생성

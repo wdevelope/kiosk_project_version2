@@ -23,4 +23,13 @@
 3. 삭제 (DELETE) = 1차 요청 : /food/:id , 2차 수행 : /food/:id?confirmDelete=
 4. 수정 (PUT) = /food/:id
 
-###
+### 🛒 order
+
+1. 생성 (POST) = /order
+2. 완료 (PUT) = /order/complete/:orderId
+3. 취소 (DELETE) = /order/cancel/:orderId
+
+### 📦 companyorder
+
+1. 생성 (POST) = /companyorder
+2. 수정 (PUT) = /companyorder/:id

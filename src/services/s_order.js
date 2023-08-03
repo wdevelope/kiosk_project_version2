@@ -2,6 +2,7 @@ const orderRepository = require('../repositories/r_order');
 const sequelize = require('../database/mysql');
 
 module.exports = {
+  // 주문 생성
   createOrder: async (orderData, aboutOrderData) => {
     const customerOrder = await orderRepository.createCustomerOrder(orderData);
     const aboutOrders = aboutOrderData.map((item) => ({ ...item, customerId: customerOrder.id }));
@@ -9,6 +10,8 @@ module.exports = {
     const totalPrice = aboutOrders.reduce((sum, item) => sum + item.price * item.amount, 0);
     return { orderId: customerOrder.id, totalPrice };
   },
+
+  // 주문 완료 처리
   completeOrder: async (orderId) => {
     const order = await orderRepository.getCustomerOrderById(orderId);
     if (order.state) {
@@ -26,6 +29,8 @@ module.exports = {
       throw error;
     }
   },
+
+  // 주문 취소 처리
   cancelOrder: async (orderId) => {
     const order = await orderRepository.getCustomerOrderById(orderId);
     if (order.state) {

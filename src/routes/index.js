@@ -13,7 +13,7 @@ const defalutRouter = [
     route: companyOrdersRouter,
   },
   {
-    path: '/orders',
+    path: '/order',
     route: ordersRouter,
   },
 ];

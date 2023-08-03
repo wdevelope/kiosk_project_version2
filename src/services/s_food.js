@@ -1,4 +1,4 @@
-const foodRepository = require('../repositories/foodRepository');
+const foodRepository = require('../repositories/r_food');
 
 module.exports = {
   // food 생성
@@ -7,7 +7,6 @@ module.exports = {
     if (!name || !price || !type) {
       throw new Error('이름, 가격, 타입을 입력해주세요.');
     }
-    // 타입이 유효한지 확인
     if (!['coffee', 'juice', 'bread'].includes(type)) {
       throw new Error('타입은 coffee, juice, bread 중 하나여야 합니다.');
     }

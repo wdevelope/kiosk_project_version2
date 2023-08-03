@@ -1,4 +1,4 @@
-const companyOrderRepository = require('../repositories/companyOrderRepository');
+const companyOrderRepository = require('../repositories/r_companyOrder');
 const sequelize = require('../database/mysql');
 
 module.exports = {

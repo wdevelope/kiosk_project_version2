@@ -1,4 +1,4 @@
-const foodService = require('../services/foodService');
+const foodService = require('../services/s_food');
 
 module.exports = {
   // food 생성
