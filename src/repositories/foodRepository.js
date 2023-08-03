@@ -26,6 +26,7 @@ module.exports = {
     return await Food.destroy({ where: { id } });
   },
 
+  // food 수정
   updateFood: async (id, data) => {
     return await Food.update(data, { where: { id } });
   },

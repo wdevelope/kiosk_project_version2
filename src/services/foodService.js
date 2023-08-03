@@ -42,11 +42,11 @@ module.exports = {
   updateFood: async (id, data) => {
     const { name, price } = data;
 
-    if (name && name === '') {
+    if (name === '') {
       throw new Error('이름을 입력해주세요.');
     }
 
-    if (price && price < 0) {
+    if (price < 0) {
       throw new Error('알맞은 가격을 입력해주세요.');
     }
 
