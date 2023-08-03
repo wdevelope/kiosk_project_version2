@@ -8,10 +8,10 @@
 
 ### 🧋 food
 
-1. 생성 (POST) : /food
-2. 조회 (GET) : 전체 : /food , 타입별 : /food?type=
-3. 삭제 (DELETE) : 1차 요청 : /food/:id , 2차 수행 : /food/:id?confirmDelete=
-4. 수정 (PUT) : /food/:id
+1. 생성 (POST) = /food
+2. 조회 (GET) = 전체 : /food , 타입별 : /food?type=
+3. 삭제 (DELETE) = 1차 요청 : /food/:id , 2차 수행 : /food/:id?confirmDelete=
+4. 수정 (PUT) = /food/:id
 
 ###
 
