@@ -10,7 +10,7 @@ const customer = sequelize.define(
       primaryKey: true,
     },
     state: {
-      type: DataTypes.BIGINT,
+      type: DataTypes.BOOLEAN,
       allowNull: false,
     },
   },

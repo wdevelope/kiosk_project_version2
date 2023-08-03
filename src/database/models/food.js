@@ -12,7 +12,7 @@ const food = sequelize.define(
 
     optionId: {
       type: DataTypes.BIGINT,
-      allowNull: false,
+      allowNull: true,
     },
 
     name: {
@@ -32,7 +32,7 @@ const food = sequelize.define(
 
     amount: {
       type: DataTypes.BIGINT,
-      allowNull: false,
+      allowNull: true,
     },
   },
   {

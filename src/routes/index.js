@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const foodRouter = require('./foodRouter');
 const companyOrdersRouter = require('./companyOrderRoutes');
+const ordersRouter = require('./orderRoutes');
 
 const defalutRouter = [
   {
@@ -10,6 +11,10 @@ const defalutRouter = [
   {
     path: '/companyOrder',
     route: companyOrdersRouter,
+  },
+  {
+    path: '/orders',
+    route: ordersRouter,
   },
 ];
 

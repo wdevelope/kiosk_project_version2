@@ -1,5 +1,5 @@
-const CompanyOrder = require('../models/CompanyOrder');
-const Food = require('../models/Food');
+const CompanyOrder = require('../database/models/companyOrder');
+const Food = require('../database/models/Food');
 
 module.exports = {
   createOrder: async (foodId) => {
