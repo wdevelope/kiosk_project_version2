@@ -10,16 +10,18 @@ module.exports = {
       res.status(400).json({ message: error.message });
     }
   },
+
   // food 조회
   getFoods: async (req, res) => {
     const foods = await foodService.getFoods(req.query.type);
     res.status(200).json(foods);
   },
 
+  // food 삭제
   deleteFood: async (req, res) => {
     try {
-      await foodService.deleteFood(req.params.id);
-      res.status(200).json({ message: '상품이 삭제되었습니다.' });
+      const result = await foodService.deleteFood(req.params.id, req.query);
+      res.status(200).json(result);
     } catch (error) {
       res.status(400).json({ message: error.message });
     }

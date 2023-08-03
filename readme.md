@@ -7,19 +7,21 @@
 
 - food
 
-  1. POST /food
-  2. GET /food
-  3. DELETE /food/:id
-  4. PUT /food/:id
+  1. 생성 = POST
 
-- food_option
-  (아직 미정)
-- customer
-  (아직 미정)
-- companyOrder
-  (아직 미정)
-- aboutOrder
-  (아직 미정)
+  - http://localhost:3000/food
+
+  2. 조회 = GET
+
+  - 전체 : http://localhost:3000/food
+  - 타입별 : http://localhost:3000/food?type=coffee
+
+  3. 삭제 = DELETE /food/:id
+
+  - 1차 요청 : http://localhost:3000/food/1
+  - 2차 수행 : http://localhost:3000/food/1?confirmDelete=true
+
+  4.  수정 = PUT /food/:id
 
 # ERD
 
