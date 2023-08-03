@@ -1,6 +1,7 @@
 const foodService = require('../services/foodService');
 
 module.exports = {
+  // food 생성
   createFood: async (req, res) => {
     try {
       const food = await foodService.createFood(req.body);
@@ -9,7 +10,7 @@ module.exports = {
       res.status(400).json({ message: error.message });
     }
   },
-
+  // food 조회
   getFoods: async (req, res) => {
     const foods = await foodService.getFoods(req.query.type);
     res.status(200).json(foods);

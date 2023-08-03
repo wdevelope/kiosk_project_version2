@@ -2,12 +2,13 @@ const foodRepository = require('../repositories/foodRepository');
 
 module.exports = {
   createFood: async (data) => {
-    const { name, price } = data;
-    if (!name || !price) {
-      throw new Error('이름과 가격을 입력해주세요.');
+    const { name, price, type } = data;
+    if (!name || !price || !type) {
+      throw new Error('이름, 가격, 타입을 입력해주세요.');
     }
-    if (typeof name !== 'string' || typeof price !== 'number') {
-      throw new Error('알맞은 타입을 지정해주세요.');
+    // 타입이 유효한지 확인 (예: 'coffee', 'juice', 'bread')
+    if (!['coffee', 'juice', 'bread'].includes(type)) {
+      throw new Error('타입은 coffee, juice, bread 중 하나여야 합니다.');
     }
     data.amount = 0;
     return await foodRepository.createFood(data);

@@ -26,7 +26,7 @@ const food = sequelize.define(
     },
 
     type: {
-      type: DataTypes.STRING,
+      type: DataTypes.ENUM('coffee', 'juice', 'bread'),
       allowNull: true,
     },
 
