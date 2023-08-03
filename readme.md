@@ -5,7 +5,7 @@
 
 # api 가이드
 
-- food
+## food
 
 1. 생성 = POST
 
