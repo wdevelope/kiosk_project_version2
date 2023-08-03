@@ -34,13 +34,11 @@ module.exports = {
           break;
         case 'ORDERED':
         case 'PENDING':
-          if (companyOrder.state === 'COMPLETED') {
-            if (food.amount < companyOrder.amount) {
-              throw new Error('현재 수량이 발주 수량보다 적어 발주 취소가 불가능합니다.');
-            }
-            await companyOrderRepository.updateState(companyOrder, newState, transaction);
-            await companyOrderRepository.decrementFoodAmount(food, companyOrder.amount, transaction);
+          if (companyOrder.state === 'COMPLETED' && food.amount < companyOrder.amount) {
+            throw new Error('현재 수량이 발주 수량보다 적어 발주 취소가 불가능합니다.');
           }
+          await companyOrderRepository.updateState(companyOrder, newState, transaction);
+          await companyOrderRepository.decrementFoodAmount(food, companyOrder.amount, transaction);
           break;
         default:
           throw new Error('잘못된 상태 값입니다.');
