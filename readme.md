@@ -20,20 +20,20 @@
 
 # 🔥 api 가이드
 
-### 🧋 food
+### 🧋 food (음식)
 
 1. 생성 (POST) = /food
 2. 조회 (GET) = 전체 : /food , 타입별 : /food?type=
 3. 삭제 (DELETE) = 1차 요청 : /food/:id , 2차 수행 : /food/:id?confirmDelete=
 4. 수정 (PUT) = /food/:id
 
-### 🛒 order
+### 🛒 order (주문)
 
 1. 생성 (POST) = /order
 2. 완료 (PUT) = /order/complete/:orderId
 3. 취소 (DELETE) = /order/cancel/:orderId
 
-### 📦 company_order
+### 📦 company_order (발주)
 
-1. 생성 (POST) = /companyorder
-2. 수정 (PUT) = /companyorder/:id
+1. 생성 (POST) = /companyOrder
+2. 수정 (PUT) = /companyOrder/:id
