@@ -27,6 +27,7 @@ module.exports = {
     }
   },
 
+  // food 수정
   updateFood: async (req, res) => {
     try {
       await foodService.updateFood(req.params.id, req.body);

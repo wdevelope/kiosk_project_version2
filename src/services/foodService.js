@@ -38,6 +38,7 @@ module.exports = {
     return { message: '상품이 삭제되었습니다.' };
   },
 
+  // food 수정
   updateFood: async (id, data) => {
     const { name, price } = data;
 
