@@ -1,5 +1,5 @@
 const express = require('express');
-const orderController = require('../controllers/orderController');
+const orderController = require('../controllers/c_order');
 const router = express.Router();
 
 // 주문 생성
