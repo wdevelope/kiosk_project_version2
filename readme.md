@@ -7,21 +7,21 @@
 
 - food
 
-  1. 생성 = POST
+1. 생성 = POST
 
-  - http://localhost:3000/food
+- http://localhost:3000/food
 
-  2. 조회 = GET
+2. 조회 = GET
 
-  - 전체 : http://localhost:3000/food
-  - 타입별 : http://localhost:3000/food?type=coffee
+- 전체 : http://localhost:3000/food
+- 타입별 : http://localhost:3000/food?type=coffee
 
-  3. 삭제 = DELETE /food/:id
+3. 삭제 = DELETE /food/:id
 
-  - 1차 요청 : http://localhost:3000/food/1
-  - 2차 수행 : http://localhost:3000/food/1?confirmDelete=true
+- 1차 요청 : http://localhost:3000/food/1
+- 2차 수행 : http://localhost:3000/food/1?confirmDelete=true
 
-  4.  수정 = PUT /food/:id
+4. 수정 = PUT /food/:id
 
 # ERD
 
