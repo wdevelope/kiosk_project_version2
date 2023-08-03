@@ -2,23 +2,27 @@ const CompanyOrder = require('../models/CompanyOrder');
 const Food = require('../models/Food');
 
 module.exports = {
-  createOrder: async (orderData) => {
-    return await CompanyOrder.create(orderData);
+  createOrder: async (foodId) => {
+    return await CompanyOrder.create({ foodId, state: 'ORDERED' });
   },
 
-  updateOrderState: async (orderId, state) => {
-    return await CompanyOrder.findByIdAndUpdate(orderId, { state });
+  getOrderById: async (id) => {
+    return await CompanyOrder.findByPk(id);
   },
 
-  getOrderById: async (orderId) => {
-    return await CompanyOrder.findById(orderId);
+  updateState: async (order, state, transaction) => {
+    return await order.update({ state }, { transaction });
   },
 
-  increaseFoodAmount: async (foodId, amount) => {
-    return await Food.findByIdAndUpdate(foodId, { $inc: { amount } });
+  getFoodById: async (foodId) => {
+    return await Food.findByPk(foodId);
   },
 
-  decreaseFoodAmount: async (foodId, amount) => {
-    return await Food.findByIdAndUpdate(foodId, { $dec: { amount } });
+  incrementFoodAmount: async (food, amount, transaction) => {
+    return await food.increment('amount', { by: amount, transaction });
+  },
+
+  decrementFoodAmount: async (food, amount, transaction) => {
+    return await food.decrement('amount', { by: amount, transaction });
   },
 };

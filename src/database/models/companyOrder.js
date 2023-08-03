@@ -26,7 +26,9 @@ const companyOrder = sequelize.define(
     },
 
     state: {
-      type: DataTypes.JSON,
+      type: DataTypes.ENUM,
+      values: ['ORDERED', 'PENDING', 'COMPLETED', 'CANCELED'],
+      defaultValue: 'ORDERED',
       allowNull: false,
     },
   },

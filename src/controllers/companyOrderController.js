@@ -1,6 +1,7 @@
 const companyOrderService = require('../services/companyOrderService');
 
 module.exports = {
+  // 발주 생성
   createCompanyOrder: async (req, res, next) => {
     try {
       const { foodId } = req.body;
@@ -11,14 +12,17 @@ module.exports = {
     }
   },
 
+  // 발주 상태 업데이트
   updateOrderState: async (req, res, next) => {
     try {
-      const { orderId } = req.params;
-      const { newState } = req.body;
-      const order = await companyOrderService.updateOrderState(orderId, newState);
-      res.json(order);
+      const { id } = req.params;
+      const { state } = req.body;
+
+      await companyOrderService.updateOrderState(id, state);
+
+      res.status(200).json({ message: '발주 상태가 성공적으로 업데이트되었습니다.' });
     } catch (error) {
-      next(error);
+      res.status(400).json({ message: error.message });
     }
   },
 };
