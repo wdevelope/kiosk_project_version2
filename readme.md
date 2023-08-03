@@ -31,3 +31,9 @@
 # 🔥 ERD
 
 ![ERD](https://ifh.cc/g/Qn26oX.png)
+
+1. food : 음식
+2. food_option : 음식 옵션
+3. company_order : 음식 발주
+4. about_order : 주문 처리
+5. customer : 주문 고객
