@@ -37,3 +37,11 @@
 
 1. 생성 (POST) = /companyOrder
 2. 수정 (PUT) = /companyOrder/:id
+
+### 🧩 food_option
+
+1. 옵션 추가 (POST) = /food/option
+
+- size_price: 상품의 size 사이즈 선택시 추가될 요금 (0일 경우 선택 불가)
+- shot_price: 상품의 shot 추가 선택시 추가될 요금 (0일 경우 추가 불가)
+- hotcoldprice: hot, ice 선택 여부 (true일 경우 hot선택 가능, false일 경우 ice만 가능)

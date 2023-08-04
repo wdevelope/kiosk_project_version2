@@ -11,18 +11,19 @@ const foodOption = sequelize.define(
     },
 
     sizePrice: {
-      type: DataTypes.BIGINT,
-      allowNull: false,
+      type: DataTypes.JSON,
+      allowNull: true,
     },
 
     shotPrice: {
       type: DataTypes.BIGINT,
-      allowNull: false,
+      allowNull: true,
     },
 
-    hotcoldePrice: {
+    hotcoldPrice: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
+      allowNull: true,
+      defaultValue: true,
     },
   },
   {

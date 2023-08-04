@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const foodController = require('../controllers/foodController');
+const foodController = require('../controllers/c_food');
 
 // food 생성
 router.post('/', foodController.createFood);
@@ -10,5 +10,7 @@ router.get('/', foodController.getFoods);
 router.delete('/:id', foodController.deleteFood);
 // food 수정
 router.put('/:id', foodController.updateFood);
+// food 옵션 추가
+router.post('/option', foodController.createFoodOption);
 
 module.exports = router;

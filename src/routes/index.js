@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const foodRouter = require('./foodRouter');
-const companyOrdersRouter = require('./companyOrderRoutes');
-const ordersRouter = require('./orderRoutes');
+const foodRouter = require('./food');
+const companyOrdersRouter = require('./companyOrder');
+const ordersRouter = require('./order');
 
 const defalutRouter = [
   {

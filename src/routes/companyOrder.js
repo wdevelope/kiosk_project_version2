@@ -1,5 +1,5 @@
 const express = require('express');
-const companyOrderController = require('../controllers/companyOrderController');
+const companyOrderController = require('../controllers/c_companyOrder');
 const router = express.Router();
 
 // 발주 생성

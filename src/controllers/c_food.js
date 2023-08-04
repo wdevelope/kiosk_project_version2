@@ -36,4 +36,25 @@ module.exports = {
       res.status(400).json({ message: error.message });
     }
   },
+
+  // food 옵션 추가
+  createFoodOption: async (req, res) => {
+    try {
+      const option = await foodService.createFoodOption(req.body);
+      res.status(201).json(option);
+    } catch (error) {
+      res.status(400).json({ message: error.message });
+    }
+  },
+
+  // food_option 삭제
+  deleteFoodOption: async (req, res) => {
+    try {
+      const id = req.params.id;
+      await foodService.deleteFoodOption(id);
+      res.status(204).json();
+    } catch (error) {
+      res.status(400).json({ message: error.message });
+    }
+  },
 };
