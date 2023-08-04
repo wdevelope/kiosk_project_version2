@@ -18,7 +18,7 @@ const loadFoodOptions = async () => {
   foodOptionCache = await FoodOption.findAll();
 };
 
-//sequelize를 사용해서 MYSQL 데이터베이스와 동기화
+// db sync
 (async () => {
   await mysql.sync().then(async () => {
     await loadFoodOptions(); // 캐시 데이터 로딩
