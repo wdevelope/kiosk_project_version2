@@ -1,13 +1,15 @@
 const express = require('express');
 const app = express();
+const router = require('./routes');
 
 // db
 const mysql = require('./database/mysql');
 const relations = require('./database/relations');
 const FoodOption = require('./database/models/foodOption');
 
-// router
-const router = require('./routes');
+// middlewares
+app.use(express.json());
+app.use('/', router);
 
 // cache
 let foodOptionCache = [];
