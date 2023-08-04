@@ -11,6 +11,8 @@ router.delete('/:id', foodController.deleteFood);
 // food 수정
 router.put('/:id', foodController.updateFood);
 // food 옵션 추가
-router.post('/option', foodController.createFoodOption);
+router.post('/:foodId', foodController.createFoodOption);
+// food 옵션 삭제
+router.delete('/:foodId', foodController.deleteFoodOption);
 
 module.exports = router;
