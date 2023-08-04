@@ -2,6 +2,7 @@
 
 - 카페 주문 키오스크앱 개발 프로젝트
 - express, javascript 함수화를 사용해서 기본 서버구현
+- 서버실행 npm run dev
 - 기능에 문제 없는 선에서, 최대한 간결하게
 
 <br>
@@ -29,13 +30,13 @@
 
 ### 🧩 food_option (음식 옵션)
 
-1. 옵션 추가 (POST) = /option/:foodId
+1. 옵션 추가 (POST) = /food/:foodId/option
 
 - size_price: 상품의 size 사이즈 선택시 추가될 요금 (0일 경우 선택 불가)
 - shot_price: 상품의 shot 추가 선택시 추가될 요금 (0일 경우 추가 불가)
 - hotcoldprice: hot, ice 선택 여부 (true일 경우 hot선택 가능, false일 경우 ice만 가능)
 
-2. 옵션 삭제 (DELETE) = /option/:foodId
+2. 옵션 삭제 (DELETE) = /food/:foodId/option
 
 ### 🛒 order (주문)
 

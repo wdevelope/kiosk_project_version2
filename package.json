@@ -1,6 +1,6 @@
 {
   "name": "kiosk_ver2",
-  "description": "- express, javascript 함수화 기본 서버구현",
+  "description": "express, javascript 함수화 기본 키오스크 서버구현",
   "version": "1.0.0",
   "main": "index.js",
   "author": "",
